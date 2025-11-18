@@ -1,0 +1,42 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+pip-wheel-metadata/
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+*.conda
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+
+# C extensions
+*.c
+*.cpp
+
+# -------------------------
+# Tools & Cache
+# -------------------------
+*.log
+*.tmp
+*.cache/
+.cache/
+pytest_cac_
+.env
