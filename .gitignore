@@ -1,0 +1,17 @@
+# Python cache and build files
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+playground/
+
+# Ignore all environment file
+**/.env
+backend/videos

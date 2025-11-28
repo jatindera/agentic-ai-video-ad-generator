@@ -1,0 +1,109 @@
+# Project Folder Structure
+
+```
+├── .env
+├── .well-known
+    └── agent-card.json
+├── app
+    ├── __init__.py
+    ├── adk_agents
+        ├── __init__.py
+        ├── base.py
+        ├── business_extractor_agent
+            ├── __init__.py
+            ├── agent.py
+            └── schema.py
+        ├── compliance_remote_agent.py
+        ├── creative_prompt_agent
+            ├── __init__.py
+            ├── agent.py
+            └── instructions_prompt.py
+        ├── creative_prompt_refiner_agent
+            ├── __init__.py
+            └── agent.py
+        ├── parallel_search_agent
+            ├── __init__.py
+            ├── agent.py
+            ├── parallel_search_subagents.py
+            └── schema.py
+        ├── pattern_extractor_agent
+            ├── __init__.py
+            └── agent.py
+        ├── review_agent
+            ├── __init__.py
+            ├── agent.py
+            └── review_instructions.py
+        ├── sanitizer_agent
+            ├── __init__.py
+            └── agent.py
+        ├── video_generator_agent
+            ├── __init__.py
+            ├── agent.py
+            └── agent_old.py
+        └── video_pipeline_app
+            ├── __init__.py
+            └── agent.py
+    ├── adk_app.py
+    ├── api
+        ├── __init__.py
+        ├── agents
+            ├── __init__.py
+            └── routes.py
+        ├── examples
+            ├── routes.py
+            └── test_retrieval_routes.py
+        └── pipeline
+            ├── __init__.py
+            ├── poll_routes.py
+            ├── routes copy.py
+            └── routes.py
+    ├── core
+        ├── __init__.py
+        ├── config.py
+        ├── logging_config.py
+        └── uvicorn_config.json
+    ├── db
+        ├── base.py
+        ├── database.py
+        └── orm
+            ├── business.py
+            ├── example_tag.py
+            ├── prompt_example.py
+            └── tag.py
+    ├── main copy.py
+    ├── main.py
+    ├── memory
+        ├── __init__.py
+        ├── memory_bank_client.py
+        └── session_manager.py
+    ├── observability
+        ├── __init__.py
+        ├── adk_plugins.py
+        └── logging_plugin.py
+    ├── schemas
+        ├── example_schema.py
+        ├── retrieval_schema.py
+        ├── tag_schema.py
+        └── video_pipeline_schema.py
+    ├── services
+        ├── __init__.py
+        ├── business_service.py
+        ├── embedding_service.py
+        ├── example_service.py
+        ├── pinecone_service.py
+        ├── retrieval_service.py
+        └── veo_client_service.py
+    └── tools
+        ├── __init__.py
+        ├── example_tools.py
+        ├── json_sanitizer.py
+        └── search_tools.py
+├── compliance_server.py
+├── list_structure.py
+├── logs
+    └── adk.log
+├── project_structure.md
+├── test.py
+├── test_embeddings.py
+└── testdb.py
+```
