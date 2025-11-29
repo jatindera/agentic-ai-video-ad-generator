@@ -4,7 +4,6 @@ from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
-from app.core.logging_config import setup_logging
 from app.db.database import engine
 from app.db.base import Base
 
@@ -21,7 +20,6 @@ from app.core.config import settings
 # ⭐ ADK Import
 from google.adk.cli.fast_api import get_fast_api_app
 
-setup_logging()
 logger = logging.getLogger()
 
 # Working directory = backend/
