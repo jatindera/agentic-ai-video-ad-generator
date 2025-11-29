@@ -2,47 +2,8 @@
 
 ```
 ├── .env
-├── .well-known
-    └── agent-card.json
+├── .env.example
 ├── app
-    ├── __init__.py
-    ├── adk_agents
-        ├── __init__.py
-        ├── base.py
-        ├── business_extractor_agent
-            ├── __init__.py
-            ├── agent.py
-            └── schema.py
-        ├── compliance_remote_agent.py
-        ├── creative_prompt_agent
-            ├── __init__.py
-            ├── agent.py
-            └── instructions_prompt.py
-        ├── creative_prompt_refiner_agent
-            ├── __init__.py
-            └── agent.py
-        ├── parallel_search_agent
-            ├── __init__.py
-            ├── agent.py
-            ├── parallel_search_subagents.py
-            └── schema.py
-        ├── pattern_extractor_agent
-            ├── __init__.py
-            └── agent.py
-        ├── review_agent
-            ├── __init__.py
-            ├── agent.py
-            └── review_instructions.py
-        ├── sanitizer_agent
-            ├── __init__.py
-            └── agent.py
-        ├── video_generator_agent
-            ├── __init__.py
-            ├── agent.py
-            └── agent_old.py
-        └── video_pipeline_app
-            ├── __init__.py
-            └── agent.py
     ├── adk_app.py
     ├── api
         ├── __init__.py
@@ -59,9 +20,7 @@
             └── routes.py
     ├── core
         ├── __init__.py
-        ├── config.py
-        ├── logging_config.py
-        └── uvicorn_config.json
+        └── config.py
     ├── db
         ├── base.py
         ├── database.py
@@ -70,16 +29,7 @@
             ├── example_tag.py
             ├── prompt_example.py
             └── tag.py
-    ├── main copy.py
     ├── main.py
-    ├── memory
-        ├── __init__.py
-        ├── memory_bank_client.py
-        └── session_manager.py
-    ├── observability
-        ├── __init__.py
-        ├── adk_plugins.py
-        └── logging_plugin.py
     ├── schemas
         ├── example_schema.py
         ├── retrieval_schema.py
@@ -93,17 +43,73 @@
         ├── pinecone_service.py
         ├── retrieval_service.py
         └── veo_client_service.py
-    └── tools
+    ├── tools
         ├── __init__.py
         ├── example_tools.py
         ├── json_sanitizer.py
         └── search_tools.py
-├── compliance_server.py
+    ├── utils
+        └── retry_config.py
+    └── video_pipeline_app
+        └── root_agent
+            ├── __init__.py
+            ├── agent.py
+            └── sub_agents
+                ├── business_requirements_agent
+                    ├── __init__.py
+                    ├── agent.py
+                    ├── instructions.py
+                    └── schema.py
+                ├── concept_selector_agent
+                    ├── __init__.py
+                    └── agent.py
+                ├── creative_prompt_agent
+                    ├── __init__.py
+                    ├── agent.py
+                    └── instructions.py
+                ├── domain_concept_parallel_agent
+                    ├── __init__.py
+                    ├── agent.py
+                    ├── concept_writer_agent
+                        ├── __init__.py
+                        ├── agent.py
+                        ├── instructions.py
+                        └── schema.py
+                    └── domain_search_agent
+                        ├── __init__.py
+                        ├── agent.py
+                        └── instructions.py
+                ├── veo3_prompt_writer_agent
+                    ├── __init__.py
+                    ├── agent.py
+                    ├── instructions.py
+                    ├── schema.py
+                    ├── veo3_prompt_refinement_agent
+                        ├── __init__.py
+                        ├── agent.py
+                        └── instructions.py
+                    └── veo3_prompt_reviewer_agent
+                        ├── __init__.py
+                        ├── agent.py
+                        └── instructions.py
+                └── video_generator_agent
+                    ├── __init__.py
+                    └── agent.py
 ├── list_structure.py
-├── logs
-    └── adk.log
 ├── project_structure.md
-├── test.py
-├── test_embeddings.py
-└── testdb.py
+└── videos
+    ├── video_20251126_120408_045176.mp4
+    ├── video_20251126_120941_705097.mp4
+    ├── video_20251127_212420_801795.mp4
+    ├── video_20251127_213404_494685.mp4
+    ├── video_20251127_213958_431670.mp4
+    ├── video_20251127_214719_580955.mp4
+    ├── video_20251128_092549_284056.mp4
+    ├── video_20251128_093041_632998.mp4
+    ├── video_20251128_095215_985908.mp4
+    ├── video_20251128_111804_790577.mp4
+    ├── video_20251128_153322_010392.mp4
+    ├── video_20251128_165455_049319.mp4
+    ├── video_20251128_181826_839919.mp4
+    └── video_20251128_182841_105219.mp4
 ```

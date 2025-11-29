@@ -1,0 +1,135 @@
+2025-11-29 09:17:26,244 INFO google_adk.google.adk.sessions.database_session_service:441 | Local timezone: Asia/Calcutta
+2025-11-29 09:17:26,573 INFO app.main:41 | FastAPI backend started successfully
+2025-11-29 09:17:26,574 INFO app.main:42 | Environment: development
+2025-11-29 09:17:26,661 INFO app.main:47 | Database tables created successfully
+2025-11-29 09:17:26,946 INFO google_adk.google.adk.cli.adk_web_server:605 | New session created: 4bc4b95a-7831-4f37-a66f-97af9ef361ed
+2025-11-29 09:17:29,506 INFO C:\Jatinder\Projects\agentic-ai-video-generator\.venv\Lib\site-packages\google\adk\cli\utils\envs.py:47 | Loaded .env file for root_agent at C:\Jatinder\Projects\agentic-ai-video-generator\backend\.env
+2025-11-29 09:17:29,509 INFO C:\Jatinder\Projects\agentic-ai-video-generator\.venv\Lib\site-packages\google\adk\cli\utils\envs.py:47 | Loaded .env file for root_agent at C:\Jatinder\Projects\agentic-ai-video-generator\backend\.env
+2025-11-29 09:17:29,541 INFO app.video_pipeline_app.root_agent.sub_agents.video_generator_agent.agent:105 | 📄 Loaded Video Generator Agent Instruction:
+2025-11-29 09:17:29,542 INFO app.video_pipeline_app.root_agent.sub_agents.video_generator_agent.agent:106 | 
+You are the Video Generator Agent.
+Follow these steps exactly:
+
+1. Receive the full {veo3_prompt_writer_output} object.
+2. Pass it directly to the function:
+       `start_video_generation(veo3_prompt_writer_output)`
+3. Return ONLY the tool output exactly as received.
+
+Rules:
+- Your response MUST be strictly the raw tool result.
+- If the tool raises an error, return that exact error without modification.
+
+2025-11-29 09:17:29,550 INFO root_agent.sub_agents.video_generator_agent.agent:105 | 📄 Loaded Video Generator Agent Instruction:
+2025-11-29 09:17:29,550 INFO root_agent.sub_agents.video_generator_agent.agent:106 | 
+You are the Video Generator Agent.
+Follow these steps exactly:
+
+1. Receive the full {veo3_prompt_writer_output} object.
+2. Pass it directly to the function:
+       `start_video_generation(veo3_prompt_writer_output)`
+3. Return ONLY the tool output exactly as received.
+
+Rules:
+- Your response MUST be strictly the raw tool result.
+- If the tool raises an error, return that exact error without modification.
+
+2025-11-29 09:17:29,551 INFO google_adk.google.adk.plugins.plugin_manager:96 | Plugin 'app.observability.plugins.adk_observability_plugin.ADKObservabilityPlugin' registered.
+2025-11-29 09:17:29,569 INFO adk.observability:52 | {"event": "agent_start", "agent": "root_orchestrator_agent", "trace_id": "e0d0a7250686413c", "input": null}
+2025-11-29 09:17:29,576 INFO adk.observability:52 | {"event": "agent_start", "agent": "BusinessRequirementsAgent", "trace_id": "50573ca9fb584f25", "input": null}
+2025-11-29 09:17:29,580 INFO adk.observability:103 | {"event": "llm_request", "trace_id": "81e2fccff0264f2b", "model": "gemini-2.5-flash", "prompt": null, "input_tokens": null}
+2025-11-29 09:17:30,429 INFO google_adk.google.adk.models.google_llm:133 | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-29 09:17:30,430 INFO google_genai.models:7027 | AFC is enabled with max remote calls: 10.
+2025-11-29 09:17:37,400 INFO google_adk.google.adk.models.google_llm:186 | Response received from the model.
+2025-11-29 09:17:37,402 INFO adk.observability:125 | {"event": "llm_response", "trace_id": "9bdf82bb6f424c2e", "output": null, "tokens_used": null}
+2025-11-29 09:17:37,424 INFO adk.observability:77 | {"event": "agent_end", "agent": "BusinessRequirementsAgent", "trace_id": "cd5e9a5789c54946", "elapsed_sec": 7.848, "output": null}
+2025-11-29 09:17:37,425 INFO adk.observability:52 | {"event": "agent_start", "agent": "domain_concept_parallel_agent", "trace_id": "53ed36e78d904107", "input": null}
+2025-11-29 09:17:37,430 INFO adk.observability:52 | {"event": "agent_start", "agent": "domain_search_agent", "trace_id": "cc328e87e2004041", "input": null}
+2025-11-29 09:17:37,430 INFO adk.observability:52 | {"event": "agent_start", "agent": "concept_writer_agent", "trace_id": "27602f9081a94c94", "input": null}
+2025-11-29 09:17:37,436 INFO adk.observability:103 | {"event": "llm_request", "trace_id": "195303e9e574402a", "model": "gemini-2.5-flash", "prompt": null, "input_tokens": null}
+2025-11-29 09:17:37,825 INFO google_adk.google.adk.models.google_llm:133 | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-29 09:17:37,827 INFO adk.observability:103 | {"event": "llm_request", "trace_id": "bac6e3039871478c", "model": "gemini-2.5-flash", "prompt": null, "input_tokens": null}
+2025-11-29 09:17:38,223 INFO google_adk.google.adk.models.google_llm:133 | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-29 09:17:38,224 INFO google_genai.models:7027 | AFC is enabled with max remote calls: 10.
+2025-11-29 09:17:41,468 INFO google_adk.google.adk.models.google_llm:186 | Response received from the model.
+2025-11-29 09:17:41,469 WARNING google_genai.types:6573 | Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2025-11-29 09:17:41,471 INFO adk.observability:125 | {"event": "llm_response", "trace_id": "87a2731bdb534a9d", "output": null, "tokens_used": null}
+2025-11-29 09:17:41,487 INFO adk.observability:156 | {"event": "tool_start", "tool": "search_similar_examples", "trace_id": "a99f7c2e678e4b54", "input": {"query": "Tech Academy offering hands-on Python and AI courses for kids, school students, freshers, and parents seeking STEM education."}}
+2025-11-29 09:17:41,487 INFO backend:25 | Generating embedding via OpenAI...
+2025-11-29 09:17:42,545 INFO httpx:1025 | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-29 09:17:45,238 INFO adk.observability:187 | {"event": "tool_end", "tool": "search_similar_examples", "trace_id": "451797aa4b0b4ed3", "elapsed_sec": 0.0, "input": {"query": "Tech Academy offering hands-on Python and AI courses for kids, school students, freshers, and parents seeking STEM education."}, "result": {"ids": [], "error": null}}
+2025-11-29 09:17:45,251 INFO adk.observability:103 | {"event": "llm_request", "trace_id": "7153c7d0b30b4982", "model": "gemini-2.5-flash", "prompt": null, "input_tokens": null}
+2025-11-29 09:17:45,251 INFO google_adk.google.adk.models.google_llm:133 | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-29 09:17:46,628 INFO google_adk.google.adk.models.google_llm:186 | Response received from the model.
+2025-11-29 09:17:46,630 INFO adk.observability:125 | {"event": "llm_response", "trace_id": "4a86b80b0d0548fd", "output": null, "tokens_used": null}
+2025-11-29 09:17:46,640 INFO adk.observability:156 | {"event": "tool_start", "tool": "fetch_examples_by_ids", "trace_id": "c5031ab014af4892", "input": {"ids": []}}
+2025-11-29 09:17:46,640 INFO adk.observability:187 | {"event": "tool_end", "tool": "fetch_examples_by_ids", "trace_id": "e0d83094ebc94e5a", "elapsed_sec": 0.0, "input": {"ids": []}, "result": {"examples": [], "error": "No IDs provided"}}
+2025-11-29 09:17:46,645 INFO adk.observability:103 | {"event": "llm_request", "trace_id": "d976cc204e8a4331", "model": "gemini-2.5-flash", "prompt": null, "input_tokens": null}
+2025-11-29 09:17:46,645 INFO google_adk.google.adk.models.google_llm:133 | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-29 09:17:48,216 INFO google_adk.google.adk.models.google_llm:186 | Response received from the model.
+2025-11-29 09:17:48,217 INFO adk.observability:125 | {"event": "llm_response", "trace_id": "2cf48950c292488a", "output": null, "tokens_used": null}
+2025-11-29 09:17:48,236 INFO adk.observability:77 | {"event": "agent_end", "agent": "domain_search_agent", "trace_id": "4381d512d9924ee5", "elapsed_sec": 10.806, "output": null}
+2025-11-29 09:17:53,324 INFO google_adk.google.adk.models.google_llm:186 | Response received from the model.
+2025-11-29 09:17:53,325 INFO adk.observability:125 | {"event": "llm_response", "trace_id": "aa410169e37b49f3", "output": null, "tokens_used": null}
+2025-11-29 09:17:53,328 INFO adk.observability:77 | {"event": "agent_end", "agent": "concept_writer_agent", "trace_id": "cc4a0616ab9a4e20", "elapsed_sec": 15.899, "output": null}
+2025-11-29 09:17:53,329 INFO adk.observability:77 | {"event": "agent_end", "agent": "domain_concept_parallel_agent", "trace_id": "d385b120ffa3422b", "elapsed_sec": 15.9, "output": null}
+2025-11-29 09:17:53,329 INFO adk.observability:52 | {"event": "agent_start", "agent": "concept_selector_agent", "trace_id": "d85ac169a7d04c02", "input": null}
+2025-11-29 09:17:53,332 INFO adk.observability:103 | {"event": "llm_request", "trace_id": "832be4069aba47e9", "model": "gemini-2.5-flash", "prompt": null, "input_tokens": null}
+2025-11-29 09:17:53,731 INFO google_adk.google.adk.models.google_llm:133 | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-29 09:17:53,731 INFO google_genai.models:7027 | AFC is enabled with max remote calls: 10.
+2025-11-29 09:18:04,034 INFO google_adk.google.adk.models.google_llm:186 | Response received from the model.
+2025-11-29 09:18:04,036 INFO adk.observability:125 | {"event": "llm_response", "trace_id": "9bf0152c50594c15", "output": null, "tokens_used": null}
+2025-11-29 09:18:04,049 INFO adk.observability:77 | {"event": "agent_end", "agent": "concept_selector_agent", "trace_id": "03abb6929ab741b4", "elapsed_sec": 10.72, "output": null}
+2025-11-29 09:18:04,050 INFO adk.observability:52 | {"event": "agent_start", "agent": "creative_agent", "trace_id": "043690fe7d6041a5", "input": null}
+2025-11-29 09:18:04,056 INFO adk.observability:103 | {"event": "llm_request", "trace_id": "e3aff79b191041ec", "model": "gemini-2.5-flash", "prompt": null, "input_tokens": null}
+2025-11-29 09:18:04,444 INFO google_adk.google.adk.models.google_llm:133 | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-29 09:18:04,444 INFO google_genai.models:7027 | AFC is enabled with max remote calls: 10.
+2025-11-29 09:18:20,154 INFO google_adk.google.adk.models.google_llm:186 | Response received from the model.
+2025-11-29 09:18:20,157 INFO adk.observability:125 | {"event": "llm_response", "trace_id": "1febdf5e664147d4", "output": null, "tokens_used": null}
+2025-11-29 09:18:20,185 INFO adk.observability:77 | {"event": "agent_end", "agent": "creative_agent", "trace_id": "2fe1f6ee0d404a74", "elapsed_sec": 16.135, "output": null}
+2025-11-29 09:18:20,187 INFO adk.observability:52 | {"event": "agent_start", "agent": "refined_veo3_prompt_writer_agent", "trace_id": "459b2d95bf384a5f", "input": null}
+2025-11-29 09:18:20,198 INFO adk.observability:52 | {"event": "agent_start", "agent": "veo3_prompt_writer_agent", "trace_id": "7ea6a0eba00645c0", "input": null}
+2025-11-29 09:18:20,211 INFO adk.observability:103 | {"event": "llm_request", "trace_id": "1c1a039ddd2e4500", "model": "gemini-2.5-flash", "prompt": null, "input_tokens": null}
+2025-11-29 09:18:21,019 INFO google_adk.google.adk.models.google_llm:133 | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-29 09:18:21,019 INFO google_genai.models:7027 | AFC is enabled with max remote calls: 10.
+2025-11-29 09:18:39,274 INFO google_adk.google.adk.models.google_llm:186 | Response received from the model.
+2025-11-29 09:18:39,278 INFO adk.observability:125 | {"event": "llm_response", "trace_id": "43efad3348ce434e", "output": null, "tokens_used": null}
+2025-11-29 09:18:39,298 INFO adk.observability:77 | {"event": "agent_end", "agent": "veo3_prompt_writer_agent", "trace_id": "736c1635439f4771", "elapsed_sec": 19.099, "output": null}
+2025-11-29 09:18:39,298 INFO adk.observability:52 | {"event": "agent_start", "agent": "refinement_loop_agent", "trace_id": "4c595a44ba144d7f", "input": null}
+2025-11-29 09:18:39,305 INFO adk.observability:52 | {"event": "agent_start", "agent": "veo3_prompt_reviewer_agent", "trace_id": "e029dae0eba64958", "input": null}
+2025-11-29 09:18:39,315 INFO adk.observability:103 | {"event": "llm_request", "trace_id": "32a49c67f84e494b", "model": "gemini-2.5-flash", "prompt": null, "input_tokens": null}
+2025-11-29 09:18:40,070 INFO google_adk.google.adk.models.google_llm:133 | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-29 09:18:40,070 INFO google_genai.models:7027 | AFC is enabled with max remote calls: 10.
+2025-11-29 09:18:51,817 INFO google_adk.google.adk.models.google_llm:186 | Response received from the model.
+2025-11-29 09:18:51,819 INFO adk.observability:125 | {"event": "llm_response", "trace_id": "f5fbf1589f8b47cc", "output": null, "tokens_used": null}
+2025-11-29 09:18:51,840 INFO adk.observability:77 | {"event": "agent_end", "agent": "veo3_prompt_reviewer_agent", "trace_id": "084c46031d304458", "elapsed_sec": 12.535, "output": null}
+2025-11-29 09:18:51,842 INFO adk.observability:52 | {"event": "agent_start", "agent": "veo3_prompt_refinement_agent", "trace_id": "e4b10d204b4e423b", "input": null}
+2025-11-29 09:18:51,858 INFO adk.observability:103 | {"event": "llm_request", "trace_id": "3dd8345e184945b3", "model": "gemini-2.5-flash", "prompt": null, "input_tokens": null}
+2025-11-29 09:18:52,748 INFO google_adk.google.adk.models.google_llm:133 | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-29 09:18:55,753 INFO google_adk.google.adk.models.google_llm:186 | Response received from the model.
+2025-11-29 09:18:55,759 INFO adk.observability:125 | {"event": "llm_response", "trace_id": "0e9e5f880a6c4630", "output": null, "tokens_used": null}
+2025-11-29 09:18:55,783 INFO adk.observability:156 | {"event": "tool_start", "tool": "exit_loop", "trace_id": "ea767f5997e5451c", "input": {}}
+2025-11-29 09:18:55,783 INFO adk.observability:187 | {"event": "tool_end", "tool": "exit_loop", "trace_id": "e7a90f37dba04d96", "elapsed_sec": 0.0, "input": {}, "result": {"status": "approved", "message": "Veo3 prompt approved by reviewer. Exiting refinement loop."}}
+2025-11-29 09:18:55,798 INFO adk.observability:103 | {"event": "llm_request", "trace_id": "052ae14402894b22", "model": "gemini-2.5-flash", "prompt": null, "input_tokens": null}
+2025-11-29 09:18:55,799 INFO google_adk.google.adk.models.google_llm:133 | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-11-29 09:18:57,112 INFO google_adk.google.adk.models.google_llm:186 | Response received from the model.
+2025-11-29 09:18:57,115 INFO adk.observability:125 | {"event": "llm_response", "trace_id": "de114f01433c4db4", "output": null, "tokens_used": null}
+2025-11-29 09:18:57,134 INFO adk.observability:77 | {"event": "agent_end", "agent": "veo3_prompt_refinement_agent", "trace_id": "a2b2001b4d794af1", "elapsed_sec": 5.292, "output": null}
+2025-11-29 09:18:57,135 INFO adk.observability:77 | {"event": "agent_end", "agent": "refinement_loop_agent", "trace_id": "d74174aa694d4bcb", "elapsed_sec": 5.293, "output": null}
+2025-11-29 09:18:57,135 INFO adk.observability:77 | {"event": "agent_end", "agent": "refined_veo3_prompt_writer_agent", "trace_id": "2163f7c7a46e4a29", "elapsed_sec": 5.293, "output": null}
+2025-11-29 09:18:57,135 INFO adk.observability:77 | {"event": "agent_end", "agent": "root_orchestrator_agent", "trace_id": "d242ef4b2a064215", "elapsed_sec": 5.293, "output": null}
+2025-11-29 09:22:02,693 INFO app.main:53 | FastAPI backend shutdown
+2025-11-29 09:22:08,980 INFO google_adk.google.adk.sessions.database_session_service:441 | Local timezone: Asia/Calcutta
+2025-11-29 09:22:09,085 INFO app.main:41 | FastAPI backend started successfully
+2025-11-29 09:22:09,085 INFO app.main:42 | Environment: development
+2025-11-29 09:22:09,125 INFO app.main:47 | Database tables created successfully
+2025-11-29 09:22:30,693 INFO app.main:53 | FastAPI backend shutdown
+2025-11-29 09:22:40,561 INFO google_adk.google.adk.sessions.database_session_service:441 | Local timezone: Asia/Calcutta
+2025-11-29 09:22:40,812 INFO app.main:41 | FastAPI backend started successfully
+2025-11-29 09:22:40,812 INFO app.main:42 | Environment: development
+2025-11-29 09:22:40,874 INFO app.main:47 | Database tables created successfully
+2025-11-29 09:23:33,236 INFO app.main:53 | FastAPI backend shutdown
+2025-11-29 09:23:40,085 INFO google_adk.google.adk.sessions.database_session_service:441 | Local timezone: Asia/Calcutta
+2025-11-29 09:23:40,193 INFO app.main:41 | FastAPI backend started successfully
+2025-11-29 09:23:40,193 INFO app.main:42 | Environment: development
+2025-11-29 09:23:40,234 INFO app.main:47 | Database tables created successfully
+2025-11-29 09:32:02,679 INFO app.main:53 | FastAPI backend shutdown
