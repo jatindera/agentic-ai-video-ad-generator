@@ -1,19 +1,37 @@
-# Agentic AI Video Ad Generator
+# Table of Contents
 
-Small businesses struggle to create digital video ads due to limited skills and resources, making it hard to compete in today’s short-form content landscape.
+1. [Problem Statement](#1-problem-statement)
+2. [Our Solution](#2-our-solution)
+3. [System Architecture](#3-system-architecture)
+4. [Setup](#4-setup)
+   - [Prerequisites](#prerequisites)
+   - [Code Setup](#code-setup)
+   - [Setup of MCP Server](#setup-of-mcp-server)
+5. [Output Visuals](#5-output-visuals)
+6. [Documentation: Observability](#6-documentation-observability)
+
+# 1. Problem Statement
+
+Small businesses often lack the creative skills, tools, and resources needed to produce digital video ads, making it difficult to compete in a world dominated by short-form content on Instagram, YouTube, Facebook, and WhatsApp.
 Our AI Video Ad Generator solves this by using a fully automated multi-agent system that transforms simple business details into professional, social-media-ready video ads.
 
----
 
-## Contents
 
-1. Project Overview
-2. Setup of Main Project
-3. Setup of MCP Server
-4. Architecture Diagram
-5. Documentation: Observability
+# 2. Our Solution
 
----
+Our solution is a fully automated, cost-effective multi-agent video ad generator that converts simple business details into a polished, social-media-ready advertisement. Specialized agents handle research, scriptwriting, image generation, and video creation in a seamless pipeline. This makes high-quality advertising accessible and affordable for small businesses without any design, editing, or technical skills.
+
+
+
+# 3.  System Architecture
+
+<p align="center">
+  <img src="diagrams/Agentic_AI_Video_Generation.png" alt="Agentic AI Video Generation Architecture" width="90%">
+</p>
+
+
+
+# 4. Setup
 
 ## Prerequisites
 
@@ -35,13 +53,7 @@ Before setup, ensure the following are installed on your system:
 
 ---
 
-# 1. Project Overview
-
-Small businesses often lack the creative skills, tools, and resources needed to produce digital video ads, making it difficult to compete in a world dominated by short-form content on Instagram, YouTube, Facebook, and WhatsApp. To solve this, we built the AI Video Ad Generator—a fully automated, multi-agent system that turns simple business inputs into a complete, social-media-ready video advertisement. The system uses coordinated agents, feedback loops, memory, example-based knowledge, and tool integrations to generate professional-quality ads without requiring design or editing expertise. This project showcases how multi-agent AI can empower millions of small businesses with scalable, accessible video advertising.
-
----
-
-# 2. Setup of Main Project
+## Code Setup
 
 ### Step 1: Clone the Repository
 
@@ -204,7 +216,7 @@ Your pipeline should run successfully at this stage.
 
 ---
 
-# 3. Setup of MCP Server
+## Setup of MCP Server
 
 ### Step 1: Clone Only the MCP Branch
 
@@ -293,15 +305,19 @@ Restart the main backend.
 
 Re-run the pipeline — your video will now be generated using the MCP server.
 
----
+# 5. Output Visuals
+## Working Pipeline
+<p align="center">
+  <img src="diagrams/pipeline.png" alt="Agentic AI Video Generation Architecture" width="90%">
+</p>
 
-# 4. Architecture Diagram
+## Workflow
+<p align="center">
+  <img src="diagrams/flow.png" alt="Agentic AI Video Generation Architecture" width="90%">
+</p>
 
-(Insert PNG diagram here)
 
----
-
-# 5. Documentation: Observability
+# 6. Documentation: Observability
 
 A full observability implementation is included under:
 
