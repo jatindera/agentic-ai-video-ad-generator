@@ -7,6 +7,8 @@ from .sub_agents.concept_selector_agent import concept_selector_agent
 from .sub_agents.creative_prompt_agent.agent import creative_agent
 from .sub_agents.veo3_prompt_writer_agent import refined_veo3_prompt_writer_agent
 from .sub_agents.video_generator_agent import video_generator_agent
+from .sub_agents.trends_research_agent import trends_research_agent
+from .sub_agents.a2a_portfolio_agent import a2a_portfolio_agent
 # ------------------------------------------------------------
 # Import sub-agents in correct execution order
 # ------------------------------------------------------------
@@ -29,7 +31,9 @@ root_agent = SequentialAgent(
         concept_selector_agent,
         creative_agent,
         refined_veo3_prompt_writer_agent, #loop agent
-        # video_generator_agent
+        video_generator_agent,
+        trends_research_agent,
+        # a2a_portfolio_agent
     ],
 )
 

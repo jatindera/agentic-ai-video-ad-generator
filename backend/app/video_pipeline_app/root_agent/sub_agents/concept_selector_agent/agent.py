@@ -4,7 +4,12 @@ from google.adk.tools.tool_context import ToolContext
 from app.core.config import settings
 from app.video_pipeline_app.root_agent.sub_agents.domain_concept_parallel_agent.concept_writer_agent.schema import ConceptWriterOutput, Concept
 
+# Observability
+from app.observability import configure_logging,get_logger
 
+# Configure logging once
+configure_logging()
+logger = get_logger(__name__)
 # -----------------------------------------------------------
 # Utility: Filter concept from {concept_writer_output}
 # -----------------------------------------------------------
@@ -17,10 +22,10 @@ async def select_concept(concepts_output: dict, concept_name: str, tool_context:
     - Second call: read ToolConfirmation and return the selected concept.
     """
 
-    print("------------- select_concept invoked -------------")
-    print("invocation_id:", tool_context.invocation_id)
-    print("concept_name:", concept_name)
-    print("---------------------------------------------------")
+    logger.info("------------- select_concept invoked -------------")
+    logger.info("invocation_id:", tool_context.invocation_id)
+    logger.info("concept_name:", concept_name)
+    logger.info("---------------------------------------------------")
 
     confirmation = tool_context.tool_confirmation
 
