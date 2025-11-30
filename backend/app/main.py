@@ -8,18 +8,20 @@ from app.db.database import engine
 from app.db.base import Base
 
 import os
+os.environ["GOOGLE_ADK_DISABLE_OTEL"] = "true"
+os.environ["OTEL_PYTHON_DISABLED"] = "true"
+
+
 
 # Routers
 from app.api.agents.routes import router as agents_router
 from app.api.examples.routes import router as examples_router
-from app.api.examples.test_retrieval_routes import router as test_retrieval_router
-from app.api.pipeline.poll_routes import router as poll_router
 
-# ADK
+# ADK Web Implementation (Only in developement mode)
 from google.adk.cli.fast_api import get_fast_api_app
 
 # Observability
-from app.observability import configure_logging, ADKObservabilityPlugin, get_logger
+from app.observability import configure_logging, get_logger
 
 # Configure logging once
 configure_logging()
@@ -52,7 +54,9 @@ async def lifespan_wrapper(app: FastAPI):
 
     logger.info("FastAPI backend shutdown")
 
-
+##################################################
+####        use Following for ADK WEB         ####
+##################################################
 app: FastAPI = get_fast_api_app(
     agents_dir=AGENT_DIR,
     session_service_uri=SESSION_DB_URL,
@@ -67,33 +71,30 @@ app: FastAPI = get_fast_api_app(
 )
 
 
-#  Now create your main FastAPI app
+# Main FastAPI app
 # app = FastAPI(
 #     title=settings.app_name,
 #     lifespan=lifespan_wrapper
 # )
 
-#  Mount ADK web server
-# app.mount("/adk", adk_app)
+ 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Change in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-# ----------------------------------------------------
-# KEEP YOUR OTHER ROUTES (non-ADK)
-# ----------------------------------------------------
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["*"],  
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
+#################################################################
+##### Session and Runner implementation in following router #####
+#################################################################
+app.include_router(agents_router, prefix="/agents", tags=["Agents"])
 
-# Your other app routes (Not ADK)
-# app.include_router(agents_router, prefix="/agents", tags=["Agents"])
-# app.include_router(examples_router, prefix="/examples", tags=["Examples"])
-# app.include_router(test_retrieval_router, prefix="/test-retrieval", tags=["Examples"])
-# app.include_router(poll_router, prefix="/pipeline", tags=["Pipeline"])
+# For vector search
+app.include_router(examples_router, prefix="/examples", tags=["Examples"])
 
-
+# health test
 @app.get("/health")
 def health():
     logger.info("Health endpoint hit!")

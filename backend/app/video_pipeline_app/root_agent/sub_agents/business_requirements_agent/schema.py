@@ -27,3 +27,9 @@ class BusinessRequirements(BaseModel):
     assumptions_made: List[str]
 
 
+
+class RawRequirements(BaseModel):
+    raw_requirements: str
+
+
+

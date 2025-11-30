@@ -1,6 +1,6 @@
 from google.adk.apps import App
 from google.adk.apps.app import ResumabilityConfig
-from app.video_pipeline_app import root_agent
+from app.video_pipeline_app.root_agent import root_agent # very important, makes sure you use object
 from app.core.config import settings
 
 APP_NAME = settings.app_name

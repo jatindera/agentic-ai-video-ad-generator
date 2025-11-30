@@ -8,6 +8,12 @@ from app.db.database import async_session
 from app.db.orm.prompt_example import PromptExample
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
+# Observability
+from app.observability import configure_logging, get_logger
+
+# Configure logging once
+configure_logging()
+logger = get_logger(__name__)
 
 
 async def fetch_examples_by_ids(ids: List[str]) -> Dict:
@@ -43,16 +49,14 @@ async def fetch_examples_by_ids(ids: List[str]) -> Dict:
    
     """
 
-    print("🔍 XXXXXXXXXX fetch_examples_by_ids called XXXXXXXXXX →", ids)
+    logger.info(f"XXXXXXXXXX fetch_examples_by_ids called XXXXXXXXXX -> {ids}")
 
     # ----------------------------------------------------------------------
     # 0. Validate input — empty list means no fetch should occur.
     # ----------------------------------------------------------------------
     if not ids:
-        return {
-            "examples": [],
-            "error": "No IDs provided"
-        }
+        return {"examples": [], "error": None}
+
 
     try:
         # ----------------------------------------------------------------------
