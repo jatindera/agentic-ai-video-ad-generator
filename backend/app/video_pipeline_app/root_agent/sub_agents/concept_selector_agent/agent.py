@@ -23,8 +23,8 @@ async def select_concept(concepts_output: dict, concept_name: str, tool_context:
     """
 
     logger.info("------------- select_concept invoked -------------")
-    logger.info("invocation_id:", tool_context.invocation_id)
-    logger.info("concept_name:", concept_name)
+    logger.info(f"invocation_id:{tool_context.invocation_id}")
+    logger.info(f"concept_name:{concept_name}")
     logger.info("---------------------------------------------------")
 
     confirmation = tool_context.tool_confirmation
