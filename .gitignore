@@ -40,3 +40,4 @@ ENV/
 .cache/
 pytest_cac_
 .env
+*.mp4

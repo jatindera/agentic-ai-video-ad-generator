@@ -1,9 +1,10 @@
 [project]
-name = "agentic-ai-starter-ai-foundry"
+name = "mcp-server-ai-video"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastmcp>=2.13.0.2",
+    "google-adk>=1.19.0",
 ]

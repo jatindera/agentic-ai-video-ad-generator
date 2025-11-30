@@ -1,10 +1,10 @@
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    GOOGLE_API_KEY: str | None = None
-    BING_API_KEY: str | None = None
-    WEATHER_API_KEY: str | None = None
-
+     # Google API Key (used later for ADK)
+    google_api_key: str = ""
+    GOOGLE_GENAI_USE_VERTEXAI: bool = False  # <-- ADD THIS
+    
     class Config:
         env_file = ".env"
 
