@@ -183,7 +183,7 @@ logger.info("Video Agent Instruction")
 
 ---
 
-# 🎯 TL;DR Summary
+# 🎯Summary
 
 * ADK plugins are automatic hooks
 * You implemented full observability: agent, LLM, tool

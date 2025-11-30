@@ -86,7 +86,7 @@ This structure allows:
 * **plugins/** → ADK Plugin system
 * **logging/** → Python loggers
 * **tracing/** → OpenTelemetry future usage
-* **metrics/** → For Prometheus or Azure Monitor
+* **metrics/** → For Prometheus or any app Monitor
 
 You now have a **clean, enterprise-grade observability layer**.
 
@@ -293,7 +293,7 @@ logger.info(f"Video Agent Instruction:\n{video_agent_instruction}")
 
 Important rule:
 
-➤ **Everything printed using print() will appear in Azure Container Logs, but NOT in your app.log file.**
+➤ **Everything printed using print() will appear in Container Logs, but NOT in your app.log file.**
 
 ---
 
@@ -343,9 +343,9 @@ You have successfully:
 * LLM response
 * Tool execution
 
-### ✔ Sending logs to both file (local) and console (Azure)
+### ✔ Sending logs to both file (local) and console
 
-### ✔ Allowing Azure Log Analytics to collect everything automatically
+### ✔ Allowing Log Analytics to collect everything automatically
 
 This is the **exact architecture used by enterprise AI/ML platforms**.
 
