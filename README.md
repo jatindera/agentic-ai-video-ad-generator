@@ -317,6 +317,14 @@ Re-run the pipeline — your video will now be generated using the MCP server.
 </p>
 
 ## Run FastAPI using Postman
+```
+URL: localhost:8000/agents/generate-video-ad
+Body:
+{
+  "raw_requirements": "1. Business Name: BrightFuture Tech Academy\n2. What do you do? We teach Python and AI to kids, school students, and freshers.\n3. Target Audience: Kids (10–17), beginners, parents looking for coding classes.\n4. Problem You Solve: Students do not get practical coding experience.\n5. What makes you unique? Hands-on projects, fun learning, job-ready skills.\n6. Tone of Your Brand: Friendly, youthful, motivating.\n7. Goal of Advertisement: Increase awareness and new enrollm"
+}
+
+```
 <p align="center">
   <img src="diagrams/postman.png" alt="FastAPI - Postman" width="90%">
 </p>
