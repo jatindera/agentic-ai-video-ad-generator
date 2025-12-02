@@ -313,9 +313,13 @@ Re-run the pipeline — your video will now be generated using the MCP server.
 
 ## Workflow
 <p align="center">
-  <img src="diagrams/flow.png" alt="Agentic AI Video Generation Architecture" width="90%">
+  <img src="diagrams/flow.png" alt="Agentic AI Video Generation Workflow" width="90%">
 </p>
 
+## Run FastAPI using Postman
+<p align="center">
+  <img src="diagrams/postman.png" alt="FastAPI - Postman" width="90%">
+</p>
 
 # 6. Documentation: Observability
 
