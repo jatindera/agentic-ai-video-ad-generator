@@ -33,7 +33,7 @@ root_agent = SequentialAgent(
         refined_veo3_prompt_writer_agent, #loop agent
         video_generator_agent,
         trends_research_agent,
-        # a2a_portfolio_agent
+        a2a_portfolio_agent
     ],
 )
 

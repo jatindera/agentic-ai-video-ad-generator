@@ -11,14 +11,19 @@ from app.video_pipeline_app.root_agent.sub_agents.business_requirements_agent.sc
 from app.core.config import settings
 
 
-
 concept_writer_agent = Agent(
     name="concept_writer_agent",
-    instruction=concept_writer_instructions,
     model=Gemini(model=settings.google_model_name, retry_config=retry_config),
     output_key="concept_writer_output",
     input_schema=BusinessRequirements,
     output_schema=ConceptWriterOutput,
     generate_content_config=types.GenerateContentConfig(temperature=0.9),  
+    instruction=concept_writer_instructions
+    
 )
+
+
+
+    
+
 
