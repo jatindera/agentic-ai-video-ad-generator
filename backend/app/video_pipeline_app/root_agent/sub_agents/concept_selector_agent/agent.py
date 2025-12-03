@@ -101,7 +101,7 @@ concept_selector_agent = LlmAgent(
 # - Do NOT infer, guess, or assume a Concept_Name.
 # - Do NOT pick a concept yourself.
 # """,
-    tools=[FunctionTool(select_concept)],
+    # tools=[FunctionTool(select_concept)],
     output_key="concept_selector_output",
     output_schema=Concept,
     input_schema=ConceptWriterOutput
